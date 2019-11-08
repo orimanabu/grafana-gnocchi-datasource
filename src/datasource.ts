@@ -910,7 +910,7 @@ export class GnocchiDatasource {
         _.each(result.data['token']['catalog'], (service) => {
           if (service['type'] === 'metric') {
             _.each(service['endpoints'], (endpoint) => {
-              if (endpoint['interface'] === 'public') {
+              if (endpoint['interface'] === 'internal') {
                 this.url = this.sanitize_url(endpoint['url']);
               }
             });

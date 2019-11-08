@@ -875,7 +875,7 @@ var GnocchiDatasource = /** @class */ (function () {
             _.each(result.data['token']['catalog'], function (service) {
                 if (service['type'] === 'metric') {
                     _.each(service['endpoints'], function (endpoint) {
-                        if (endpoint['interface'] === 'public') {
+                        if (endpoint['interface'] === 'internal') {
                             _this.url = _this.sanitize_url(endpoint['url']);
                         }
                     });
